@@ -11,12 +11,6 @@ stage('Email Notifications'){
  Thanks
  vishal''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'vishalf2018@gmail.com'
    }
- 
- stage('git checkout') {
- withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'deploytos3', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]){
- sh "aws s3 ls"
-    }
-  }
-}
+ }
 
 
